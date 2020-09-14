@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Cálculo de IMC</title>
+</head>
+<body>
+ <div class="jumbotron">
+       <h1> Calcule o seu IMC</h1>
+ </div>
+<div class="container">
+    <h1>Fórmula atual para cálculo do IMC: Peso/(Altura*Altura);</h1>
+    <form>
+        <p>
+            Informe o nome: <input class='form-control' id='txtnome' type="text">
+         </p>
+        
+        <p>
+            Informe peso: <input class='form-control' id='txtpeso' type="text">
+        </p>
+        
+        <p>
+            Informe altura: <input class='form-control' id='txtaltura' type="text">
+        </p>
+        <button class='btn btn-primary'>Calcular</button>
+    
+        <h2 class='resultado'></h2> 
+        <div class='tabela-resultados'>
+        </div>
+    </form>
+</div>     
+<script src="js/scripts.js"></script>
+</body>
+</html>

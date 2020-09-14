@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema de gerações</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br><hr>");
+        }
+        
+        function mostra(mensagem){
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        var anoAtual = 2020;
+        var anoChegadaBrasil = 1500;
+        var totalAnos = (anoChegadaBrasil - anoAtual)*-1 ;
+        mostra("Ano do descobrimento do Brasil: " + anoChegadaBrasil )
+        mostra("Anos que se passaram desde o descobrimento do Brasil " + totalAnos);
+
+        mostra("Desde então foram " + Math.round(totalAnos/28) + " gerações &#127773;" );
+
+
+    </script>
+</body>
+</html>
