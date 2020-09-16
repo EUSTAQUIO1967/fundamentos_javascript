@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    function  mostra(frase){
+        document.write(frase + "<br>");
+    }
+    var loginCadastrado = 'alura';
+    var senhaCadastrada = "alura123";
+    for(var tentativa=1; tentativa <= 3 ; tentativa++){
+        var loginUsuario = prompt("informe usuário:");
+        var senhaUsuario = prompt("informe senha:")
+        if (loginCadastrado==loginUsuario && senhaUsuario==senhaCadastrada) {
+                mostra("usuário logado");
+            break;
+            } else {
+                alert("Tentativa" + tentativa + "Usuário ou senha inválida");
+            }
+        }
+
+</script>

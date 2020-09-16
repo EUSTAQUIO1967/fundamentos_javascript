@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebolt</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+
+        }
+
+        
+        function analisa(pontosDesteAno, pontosAnoPassado){
+            var result='';
+            if (pontosDesteAno < pontosAnoPassado){
+                result = "esta pior que o ano passado"
+            } else if(pontosDesteAno == pontosAnoPassado){
+                result = "está igual ao ano passado"
+            } else {
+                result = "esta melhor que o ano passado"
+            }
+
+            return result;
+
+        }
+
+
+        var pontosAnoPassado = Number.parseInt(prompt("Informe o numero de pontos do seu time no ano passado"));
+
+        var vitorias = Number.parseInt(prompt("Entre com o numero de vitorias deste ano."));
+
+        var empates = Number.parseInt(prompt("Entre com o numero de empates deste ano."));
+
+        var pontos = (vitorias * 3) + empates;
+
+        mostra("pontos  do ano passado " + pontosAnoPassado);
+
+        mostra("pontos do seu time  este ano " + pontos);
+
+        mostra(`O seu time ${analisa(pontos, pontosAnoPassado)}`)
+
+    </script>
+</body>
+</html>

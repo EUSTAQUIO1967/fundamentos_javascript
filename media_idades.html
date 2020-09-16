@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Idades</title>
+</head>
+<body>
+    <script>
+        var totalFamiliares = parseInt(prompt("quantidade de familiares" ));
+        var somaIdades = 0;
+        
+        for(var cont=1; cont <= totalFamiliares ; cont++)
+            somaIdades += parseInt(prompt("informe idade do " + cont + " familiar"));
+        
+        media = Math.round(somaIdades / totalFamiliares);
+        alert("media de idades : " + media );
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Anos que aconteram copa do mundo</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    
+    <h1>Anos que tiveram Copa do Mundo</h1>
+
+    <div id='resultado'></div>
+
+
+    <script>
+        var anoCopa = 1930;
+        var saida = document.querySelector("#resultado");
+        saida.innerHTML = "";
+
+        do {
+            saida.innerHTML += `<p>Teve copa no ano ${anoCopa}. </p>`;
+            anoCopa += 4;
+        } while(anoCopa <= 2020);
+    </script>
+
+</body>
+</html>

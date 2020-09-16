@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebolt</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        function analisa(numeroPensado, chute){
+            if (numeroPensado < chute) {
+                mostra("<h3> O número pensado é menor que o seu chute</h3>");
+            } else if (numeroPensado > chute){
+                mostra("<h3>O número pensado é maior que o seu chute</h3>");
+            }
+
+            if (numeroPensado == chute){
+                return true;
+            }
+            return false;
+        }
+
+        function sorteia(numero){
+            return Number.parseInt(Math.random() * numero);
+        }
+
+        var numero = prompt("Informe um numero de 1 a 1000");
+
+        mostra("<h1>Já pensei num número<h1>");
+
+        var numeroPensado =  sorteia(numero);
+    
+        
+        for (let i = 5 ; i > 0 ; i--) {
+            mostra(`<h2>Voce tem ${i} tentativas</h2>` );
+            var chute = Number.parseInt(prompt(`Chuta um numero: (tentativa ${i}) `));
+            if (analisa(numeroPensado,chute)) {
+                mostra("<h1>Parabéns!!! Você acertou &#128513;</h1>")
+                break;
+            }
+        }
+      
+        
+        mostra("Fim de jogo &#128406;")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE Html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Números</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <h1>Mostre os números de 30 a 40 menos o 33 e 37</h1>
+    <div id='resultado'></div>
+    <script>
+        var saida = document.querySelector("#resultado");
+        saida.innerHTML = "";
+        var contador=1;
+        do {
+            if (contador >=30 && contador <=40 && contador !=33 && contador !=37){
+                saida.innerHTML += `<p>O número ${contador}. </p>`;
+            }
+            contador++;
+        } while(contador <= 50);
+    </script>
+</body>
+</html>

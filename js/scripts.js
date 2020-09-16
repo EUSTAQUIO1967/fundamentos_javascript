@@ -21,13 +21,13 @@ return valor.replace(',','.');
 }
 
 function calculaImc(nome, peso,altura){
-resultado.innerHTML='' ;
-peso = converteNumeroParaFloat(peso);
-altura = converteNumeroParaFloat(altura);
-resultado.setAttribute("class", " alert alert-success");
-var imc = ( Number(peso) / ( Number(altura)*Number(altura) ) ).toFixed(2) ;
-resultado.innerHTML= `${nome}, o seu IMC é : ${imc} kg/m2` ; 
-resultado.innerHTML += `<br>voce está  ${analisaResultado(nome, peso, altura, imc)}`;
+    resultado.innerHTML='' ;
+    peso = converteNumeroParaFloat(peso);
+    altura = converteNumeroParaFloat(altura);
+    resultado.setAttribute("class", " alert alert-success");
+    var imc = ( Number(peso) / ( Number(altura)*Number(altura) ) ).toFixed(2) ;
+    resultado.innerHTML= `${nome}, o seu IMC é : ${imc} kg/m2` ; 
+    resultado.innerHTML += `<br>voce está  ${analisaResultado(nome, peso, altura, imc)}`;
 }
 
 function analisaResultado(nome, peso, altura, imc){
