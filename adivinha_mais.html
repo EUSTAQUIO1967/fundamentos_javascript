@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Adivinha</title>
+    
+</head>
+<body>
+
+    <div class="container">
+        <div id='resposta'></div>
+        <h1>Adivinha meu segredo</h1>
+        <div class="form-group">
+            <label for="txtnumero">Informe um número de 1 a 10</label>
+            <input  class="form-control" id="informe um número" type="txtnumero">
+        </div>
+        <button class="btn btn-primary">Compare com meu segredo</button>
+    </div>
+    
+   <script>
+       var cpresposta = document.querySelector("#resposta");     
+       var seunumero = document.querySelector("input");
+       var botao = document.querySelector('button');
+
+       function sorteia(){
+         return segredo= Math.round(Math.random()*10);
+       }
+
+       var tentativa=0;
+       var segredo=sorteia();
+              
+        function verifica(){
+            tentativa++;
+        
+            if (parseInt(seunumero.value) == segredo)
+                cpresposta.innerHTML = `<h2 class="alert alert-success">Tentativa: ${tentativa}  você ACERTOU!!!<h2>`;
+            else
+                cpresposta.innerHTML = `<h2 class="alert alert-danger">Tentativa: ${tentativa} você ERROU!!!<h2>`;
+            segredo = sorteia();
+            seunumero.value = "";        
+            seunumero.focus();
+        }
+        
+        botao.onclick = verifica;
+           
+
+   </script> 
+</body>
+</html>
